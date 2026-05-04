@@ -2,6 +2,8 @@ import { Header } from '@/components/base/header.tsx'
 import Particles from '@/components/react-bits/background-particles'
 import LightRays from '@/components/react-bits/light-rays'
 import { Home } from '@/components/base/home.tsx'
+import { About } from '@/components/base/about.tsx'
+import { Jobs } from '@/components/base/jobs.tsx'
 
 function App() {
   return (
@@ -26,8 +28,10 @@ function App() {
         />
       </div>
       <Header />
-      <main className="flex-1 pt-[68px]">
+      <main className="flex-1 pt-17">
         <Home />
+        <About />
+        <Jobs />
       </main>
     </>
   )
