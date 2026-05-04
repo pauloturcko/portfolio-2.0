@@ -9,13 +9,13 @@ export const Header = () => {
       "bg-black/60 backdrop-blur-md",
     )}>
       <div>
-        <h1 className="font-mono text-sm font-semibold">$ pauloturcko.dev</h1>
+        <a href="#home" className="font-mono text-sm font-semibold">$ pauloturcko.dev</a>
       </div>
       <div>
         <ul className="[&_a]:text-muted-foreground [&_a]:hover:text-foreground flex gap-4 font-mono text-sm font-medium uppercase [&_a]:transition-colors">
           <li>
             <a
-              href="/"
+              href="#about"
             >
               Sobre
             </a>
