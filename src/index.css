@@ -24,6 +24,20 @@
   html {
     @apply font-sans;
   }
+
+  /* SCROLLBAR GLOBAL */
+  html::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: var(--color-muted);
+    border-radius: 9999px;
+  }
 }
 
 @theme inline {

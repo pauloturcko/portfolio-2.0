@@ -22,14 +22,14 @@ export const Header = () => {
           </li>
           <li>
             <a
-              href="/"
+              href="#jobs"
             >
               Experiência
             </a>
           </li>
           <li>
             <a
-              href="/"
+              href="#projects"
             >
               Projetos
             </a>
