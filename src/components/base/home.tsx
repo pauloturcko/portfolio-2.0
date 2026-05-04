@@ -7,7 +7,7 @@ import TiltedCard from '@/components/react-bits/tilted-card'
 
 export const Home = () => {
   return (
-    <div id="home" className="flex">
+    <div id="home" className="flex pt-4 pb-8">
       <div className="mt-24 ml-36 flex h-auto flex-col items-stretch justify-center gap-8">
         <span className="font-mono font-bold">——— olá, mundo</span>
         <h1 className="bg-linear-to-r from-[#FFFFFF] to-[#8F8F8F] bg-clip-text font-mono text-6xl font-bold text-transparent">

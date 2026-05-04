@@ -4,6 +4,7 @@ import LightRays from '@/components/react-bits/light-rays'
 import { Home } from '@/components/base/home.tsx'
 import { About } from '@/components/base/about.tsx'
 import { Jobs } from '@/components/base/jobs.tsx'
+import { Projects } from '@/components/base/projects.tsx'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <div className="fixed inset-0 -z-20 overflow-hidden">
         <Particles
           className="fixed inset-0 -z-20 h-screen w-screen"
-          particleCount={1000}
+          particleCount={200}
           particleSpread={20}
           speed={0.1}
           particleBaseSize={100}
@@ -32,6 +33,7 @@ function App() {
         <Home />
         <About />
         <Jobs />
+        <Projects />
       </main>
     </>
   )

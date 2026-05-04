@@ -1,7 +1,7 @@
 export const Jobs = () => {
   return (
     <div
-      id="about"
+      id="jobs"
       className="mx-64 mt-46 flex flex-col gap-4 pb-20"
     >
       <span className="text-primary font-mono text-xs font-normal uppercase">// 02. Carreira</span>
