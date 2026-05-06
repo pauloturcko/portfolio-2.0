@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from 'react'
-import { cn } from '@/lib/utils'
 import { Renderer, Program, Triangle, Mesh } from 'ogl'
 
 export type RaysOrigin =

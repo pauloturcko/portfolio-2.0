@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Portfólio 2.0",
+    "description": "Um espaço dedicado a compartilhar minha evolução como desenvolvedor, reunindo projetos recentes e estudos contínuos. Desenvolvido com tecnologias modernas e com foco em UX.",
+    "url": "#home",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "name": "WhaiData",
+    "description": "Sistema financeiro inteligente para controle e análise de gastos, com geração de insights automáticos, importação de dados e relatórios personalizados. Desenvolvido com foco em experiência do usuário e tomada de decisão.",
+    "url": null,
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Styled Components",
+      "Node.js",
+      "Express"
+    ]
+  },
+  {
+    "name": "Nimbus",
+    "description": "Serviço de cloud storage com arquitetura robusta, incluindo gerenciamento de arquivos, controle de acesso, versionamento e processamento assíncrono, desenvolvido com tecnologias modernas do ecossistema .NET.",
+    "url": null,
+    "technologies": ["C#", ".NET", "SQL Server", "Next.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "name": "Bout me",
+    "description": "Um pouco além do código...",
+    "url": null,
+    "technologies": ["React", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "name": "Vitality Gym",
+    "description": "Plataforma fullstack para gestão de academia, com controle de usuários, treinos, planos e agendamentos, incluindo notificações, automações e lógica de negócio voltada à organização e escalabilidade do sistema.",
+    "url": null,
+    "technologies": ["Node.js", "Nest.js", "React", "TypeScript", "Styled Components"]
+  },
+  {
+    "name": "Yūgen",
+    "description": "Landing page de uma startup fictícia focada em produtividade e estado de foco profundo, com design minimalista, animações suaves e experiência centrada na imersão do usuário.",
+    "url": null,
+    "technologies": ["React", "TypeScript", "Tailwind CSS"]
+  }
+]

@@ -12,6 +12,10 @@ const buttonVariants = cva(
           '!bg-clip-padding bg-[linear-gradient(135deg,var(--color-fade-start),var(--color-fade-end))] cursor-pointer hover:opacity-90 text-secondary',
         default: 'bg-primary text-primary-foreground [a]:hover:bg-primary/80 cursor-pointer',
         secondary: 'text-secondary-foreground hover:bg-secondary/80 border-white cursor-pointer',
+        outline:
+          'border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50',
+        ghost:
+          'hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50',
       },
       size: {
         default:
