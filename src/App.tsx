@@ -5,6 +5,8 @@ import { Home } from '@/components/base/home.tsx'
 import { About } from '@/components/base/about.tsx'
 import { Jobs } from '@/components/base/jobs.tsx'
 import { Projects } from '@/components/base/projects.tsx'
+import { Contact } from '@/components/base/contact.tsx'
+import { Footer } from '@/components/base/footer.tsx'
 
 function App() {
   return (
@@ -29,11 +31,16 @@ function App() {
         />
       </div>
       <Header />
-      <main className="flex-1 pt-17">
+      <main
+        id="app-main"
+        className="relative flex-1 pt-17"
+      >
         <Home />
         <About />
         <Jobs />
         <Projects />
+        <Contact />
+        <Footer />
       </main>
     </>
   )

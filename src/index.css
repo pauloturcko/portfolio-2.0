@@ -18,11 +18,18 @@
     height: 100%;
     min-height: 100svh;
   }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
   body {
     @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
+  }
+  [id] {
+    scroll-margin-top: 5.5rem;
   }
 
   /* SCROLLBAR GLOBAL */
@@ -37,6 +44,12 @@
   html::-webkit-scrollbar-thumb {
     background: var(--color-muted);
     border-radius: 9999px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
