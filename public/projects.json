@@ -12,9 +12,9 @@
     "technologies": [
       "Next.js",
       "TypeScript",
-      "Styled Components",
       "Node.js",
-      "Express"
+      "Express",
+      "Styled Components"
     ]
   },
   {
