@@ -11,7 +11,7 @@ export const About = () => {
         Sobre mim
       </h2>
       <div className="flex flex-col justify-between gap-8 md:flex-row">
-        <div className="text-muted-foreground text-sm md:text-md flex w-full md:w-2/3 flex-col gap-4 font-normal">
+        <div className="text-muted-foreground text-sm md:text-md flex w-full md:w-2/3 lg:w-3/5 flex-col gap-4 font-normal">
           <p>
             Sou desenvolvedor front-end com experiência profissional na construção de interfaces
             modernas e performáticas utilizando React, com foco em usabilidade e qualidade de
