@@ -72,7 +72,7 @@ export const ProjectsCard = ({
           </DialogContent>
         </Dialog>
       )}
-      <SpotlightCard className="border-muted-foreground hover:border-primary flex md:h-90 lg:h-82 xl:h-72 flex-col justify-between gap-4 rounded-xl border transition-all duration-300">
+      <SpotlightCard className="border-muted-foreground hover:border-primary flex h-90 lg:h-82 xl:h-72 flex-col justify-between gap-4 rounded-xl border transition-all duration-300">
         <div className="flex h-full flex-col">
           <div className="text-muted-foreground flex justify-between font-mono text-xs font-normal">
             <span>project // 0{index + 1}</span>
