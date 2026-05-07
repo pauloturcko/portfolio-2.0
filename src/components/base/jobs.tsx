@@ -137,7 +137,7 @@ export const Jobs = () => {
                   usuário. Atuação independente no desenvolvimento front-end, colaborando com
                   equipes de design.
                 </p>
-                <ul className="flex gap-2">
+                <ul className="flex gap-2 flex-wrap">
                   <li className="rounded-full border border-mist-700 px-3 py-1 font-mono text-xs">
                     HTML
                   </li>

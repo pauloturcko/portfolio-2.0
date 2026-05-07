@@ -2,6 +2,9 @@ import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
+import { Github } from '@/assets/icons/github.tsx'
+import { Linkedin } from '@/assets/icons/linkedin.tsx'
+import { Mail } from 'lucide-react'
 
 type MenuItem = {
   label: string
@@ -312,7 +315,6 @@ export default function BubbleMenu({
             />
           </button>
         </div>
-
       </nav>
 
       {mounted &&
@@ -331,7 +333,7 @@ export default function BubbleMenu({
             aria-hidden={!isMenuOpen}
           >
             <ul
-              className="flex list-none flex-col gap-4"
+              className="flex h-auto list-none flex-col gap-4"
               role="menu"
               aria-label="Menu links"
             >
@@ -369,6 +371,31 @@ export default function BubbleMenu({
                   </a>
                 </li>
               ))}
+            </ul>
+            <ul className="text-muted-foreground flex justify-center gap-4 mt-12 mb-4">
+              <li className="hover:text-primary cursor-pointer">
+                <a
+                  href="https://github.com/pauloturcko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github />
+                </a>
+              </li>
+              <li className="hover:text-primary cursor-pointer">
+                <a
+                  href="https://www.linkedin.com/in/pauloturco/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin />
+                </a>
+              </li>
+              <li className="hover:text-primary cursor-pointer">
+                <a href="mailto:pauloturcko@gmail.com">
+                  <Mail />
+                </a>
+              </li>
             </ul>
           </div>,
           document.body,
