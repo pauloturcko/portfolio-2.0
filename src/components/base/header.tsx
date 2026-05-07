@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button.tsx'
-import BubbleMenu from '@/components/react-bits/staggered-menu'
+import BubbleMenu from '@/components/react-bits/bubble-menu'
 
 export const Header = () => {
   return (
