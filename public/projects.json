@@ -8,14 +8,8 @@
   {
     "name": "WhaiData",
     "description": "Sistema financeiro inteligente para controle e análise de gastos, com geração de insights automáticos, importação de dados e relatórios personalizados. Desenvolvido com foco em experiência do usuário e tomada de decisão.",
-    "url": null,
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "Styled Components"
-    ]
+    "url": "https://whaidata-client.vercel.app/",
+    "technologies": ["Next.js", "TypeScript", "Node.js", "Express", "Styled Components"]
   },
   {
     "name": "Nimbus",
