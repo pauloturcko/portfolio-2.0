@@ -32,7 +32,7 @@
   {
     "name": "Yūgen",
     "description": "Landing page de uma startup fictícia focada em produtividade e estado de foco profundo, com design minimalista, animações suaves e experiência centrada na imersão do usuário.",
-    "url": null,
+    "url": "https://yugen-mauve.vercel.app",
     "technologies": ["React", "TypeScript", "Tailwind CSS"]
   }
 ]
