@@ -26,13 +26,25 @@ export const ProjectsCard = ({
 }: ProjectsCardProps) => {
   const [open, setOpen] = useState(false)
 
+  const handleCardClick = () => {
+    if (url === null) {
+      setOpen(true)
+      return
+    }
+
+    if (url === "#home") {
+      return
+    }
+
+    window.open(url, "_blank", "noopener,noreferrer")
+  }
+
   const renderIcon = () => {
     if (url === null) {
       return (
         <Info
           size="18"
           className="cursor-pointer"
-          onClick={() => setOpen(true)}
         />
       )
     }
@@ -42,16 +54,10 @@ export const ProjectsCard = ({
     }
 
     return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <ExternalLink
-          size="18"
-          className="cursor-pointer"
-        />
-      </a>
+      <ExternalLink
+        size="18"
+        className="cursor-pointer"
+      />
     )
   }
 
@@ -72,7 +78,10 @@ export const ProjectsCard = ({
           </DialogContent>
         </Dialog>
       )}
-      <SpotlightCard className="border-muted-foreground hover:border-primary flex h-90 lg:h-82 xl:h-72 flex-col justify-between gap-4 rounded-xl border transition-all duration-300">
+      <SpotlightCard
+        onClick={handleCardClick}
+        className="border-muted-foreground hover:border-primary flex h-90 lg:h-82 xl:h-72 cursor-pointer flex-col justify-between gap-4 rounded-xl border transition-all duration-300"
+      >
         <div className="flex h-full flex-col">
           <div className="text-muted-foreground flex justify-between font-mono text-xs font-normal">
             <span>project // 0{index + 1}</span>
