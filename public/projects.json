@@ -13,9 +13,9 @@
   },
   {
     "name": "Nimbus",
-    "description": "Serviço de cloud storage com arquitetura robusta, incluindo gerenciamento de arquivos, controle de acesso, versionamento e processamento assíncrono, desenvolvido com tecnologias modernas do ecossistema .NET.",
+    "description": "Serviço de cloud storage inspirado no Google Drive, com upload de arquivos grandes em partes, links compartilháveis com permissões, versionamento e processamento assíncrono com filas, em TypeScript de ponta a ponta.",
     "url": null,
-    "technologies": ["C#", ".NET", "SQL Server", "Next.js", "TypeScript", "Tailwind CSS"]
+    "technologies": ["NestJS", "React", "TypeScript", "PostgreSQL", "RabbitMQ", "S3"]
   },
   {
     "name": "Bout me",
@@ -27,7 +27,7 @@
     "name": "Vitality Gym",
     "description": "Plataforma fullstack para gestão de academia, com controle de usuários, treinos, planos e agendamentos, incluindo notificações, automações e lógica de negócio voltada à organização e escalabilidade do sistema.",
     "url": null,
-    "technologies": ["Node.js", "Nest.js", "React", "TypeScript", "Styled Components"]
+    "technologies": ["Node.js", "NestJS", "React", "TypeScript", "Styled Components"]
   },
   {
     "name": "Yūgen",
