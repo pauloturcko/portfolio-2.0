@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Header } from '@/components/base/header.tsx'
 import Particles from '@/components/react-bits/background-particles'
 import LightRays from '@/components/react-bits/light-rays'
@@ -42,6 +43,7 @@ function App() {
         <Contact />
         <Footer />
       </main>
+      <Analytics />
     </>
   )
 }
