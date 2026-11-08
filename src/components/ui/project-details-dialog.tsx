@@ -21,26 +21,26 @@ type ProjectDetailsDialogProps = {
   returnFocusRef?: RefObject<HTMLElement | null>
 }
 
+// Todos os botões têm a mesma altura e largura, e o rótulo nunca quebra de linha
+const linkButtonBase = 'h-10 w-full min-w-0 justify-center gap-2 px-3 text-xs whitespace-nowrap'
+
 const ProjectLinks = ({ project }: { project: Project }) => {
   const repositories = project.repositories.filter((repo): repo is { label: string; url: string } =>
     Boolean(repo.url),
   )
   const hasAppLink = Boolean(project.url)
-
-  if (!hasAppLink && repositories.length === 0) return null
+  if (repositories.length === 0 && !hasAppLink) return null
 
   return (
-    <div className="flex flex-wrap gap-2 lg:justify-end">
+    // Um botão abaixo do outro, alinhados ao início do texto
+    <div className="flex flex-col gap-2">
       {repositories.map((repo) => (
         <a
           key={repo.url}
           href={repo.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={cn(
-            buttonVariants({ variant: 'outline', size: 'lg' }),
-            'gap-2 px-3 font-mono text-xs',
-          )}
+          className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), linkButtonBase, 'font-mono')}
         >
           <Github aria-hidden="true" />
           {repo.label}
@@ -52,10 +52,7 @@ const ProjectLinks = ({ project }: { project: Project }) => {
           render={
             <a
               href={project.url}
-              className={cn(
-                buttonVariants({ variant: 'gradient', size: 'lg' }),
-                'gap-2 px-3 text-xs font-bold',
-              )}
+              className={cn(buttonVariants({ variant: 'gradient', size: 'lg' }), linkButtonBase, 'font-bold')}
             />
           }
           nativeButton={false}
@@ -69,10 +66,7 @@ const ProjectLinks = ({ project }: { project: Project }) => {
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={cn(
-            buttonVariants({ variant: 'gradient', size: 'lg' }),
-            'gap-2 px-3 text-xs font-bold',
-          )}
+          className={cn(buttonVariants({ variant: 'gradient', size: 'lg' }), linkButtonBase, 'font-bold')}
         >
           Acessar projeto
           <ArrowUpRight aria-hidden="true" />
@@ -102,7 +96,7 @@ export const ProjectDetailsDialog = ({
           initialFocus={scrollAreaRef}
           finalFocus={returnFocusRef}
           overlayClassName="bg-black/70 duration-200 supports-backdrop-filter:backdrop-blur-sm"
-          closeButtonClassName="top-3 right-3 md:top-4 md:right-4"
+          closeButtonClassName="bg-card/90 top-3 right-3 z-10 backdrop-blur-sm md:top-4 md:right-4"
           className={cn(
             'bg-card flex h-auto flex-col overflow-hidden rounded-2xl border border-white/10 p-0 ring-0',
             // Mesma largura útil do container do Header (max-w-400 menos o gutter compartilhado)
@@ -115,11 +109,11 @@ export const ProjectDetailsDialog = ({
             tabIndex={-1}
             className="min-h-0 overflow-y-auto overscroll-contain p-5 outline-none md:p-8"
           >
-            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] lg:grid-rows-[1fr_auto] lg:gap-x-8 lg:gap-y-6">
+            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:grid-rows-[1fr_auto] lg:gap-x-8 lg:gap-y-6 xl:grid-cols-[minmax(0,7fr)_minmax(0,3fr)]">
               {/* Informações */}
-              <div className="flex flex-col gap-3 pr-10 lg:col-start-2 lg:row-start-1 lg:pr-6">
+              <div className="flex flex-col gap-3 lg:col-start-2 lg:row-start-1">
                 {(project.type || project.status) && (
-                  <div className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs">
+                  <div className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1 pr-10 font-mono text-xs">
                     {project.status && (
                       <span className="border-input rounded-full border px-2 py-0.5">
                         {project.status}
@@ -128,7 +122,7 @@ export const ProjectDetailsDialog = ({
                     {project.type && <span>{project.type}</span>}
                   </div>
                 )}
-                <DialogTitle className="font-mono text-2xl leading-tight font-bold md:text-3xl">
+                <DialogTitle className="pr-10 font-mono text-2xl leading-tight font-bold md:text-3xl">
                   {project.name}
                 </DialogTitle>
                 <DialogDescription className="text-sm leading-relaxed md:text-base">

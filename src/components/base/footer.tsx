@@ -3,7 +3,7 @@ import { Copyright } from 'lucide-react'
 export const Footer = () => {
   return (
     <footer className="border-t-muted flex w-full justify-center border px-8 py-4 md:px-36 md:py-6">
-      <p className="text-muted-foreground flex items-center gap-2">
+      <p className="text-muted-foreground flex items-center gap-2 text-center">
         <Copyright
           size={12}
           aria-hidden="true"

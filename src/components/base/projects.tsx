@@ -26,7 +26,7 @@ export const Projects = () => {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="mx-auto flex w-full max-w-400 flex-col gap-4 px-(--page-gutter) py-12 pb-20 md:mt-24 md:py-12 lg:py-18 xl:py-18"
+      className="flex flex-col gap-4 px-6 py-12 pb-20 md:mt-24 md:px-6 md:py-12 lg:px-12 lg:py-18 xl:px-36 xl:py-18"
     >
       <span className="text-primary font-mono text-xs font-normal uppercase">// 03. Trabalhos</span>
       <h2
@@ -40,7 +40,7 @@ export const Projects = () => {
         com seu foco, seja arquitetura, experiência do usuário ou a resolução de um problema real.
         Clique em um projeto para ver os detalhes.
       </p>
-      <ul className="mt-8 grid auto-rows-fr gap-4 md:grid-cols-2">
+      <ul className="mt-8 grid gap-4 md:auto-rows-fr md:grid-cols-2">
         {projects.map((project, index) => (
           <li key={project.name}>
             <ProjectsCard
