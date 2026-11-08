@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button.tsx'
+import { buttonVariants } from '@/components/ui/button.tsx'
 import BubbleMenu from '@/components/react-bits/bubble-menu'
 
 export const Header = () => {
@@ -10,8 +10,11 @@ export const Header = () => {
         'border-b border-white/8 bg-black/55 backdrop-blur-xl',
       )}
     >
-      <div className="mx-auto flex w-full max-w-400 items-center justify-between px-4 py-3 md:px-6 lg:px-12 xl:px-36">
-        <nav className="hidden w-full items-center justify-between md:flex">
+      <div className="mx-auto flex w-full max-w-400 items-center justify-between px-(--page-gutter) py-3">
+        <nav
+          aria-label="Navegação principal"
+          className="hidden w-full items-center justify-between md:flex"
+        >
           <div>
             <a
               href="#home"
@@ -38,13 +41,9 @@ export const Header = () => {
           </div>
           <a
             href="#contact"
+            className={buttonVariants({ variant: 'secondary', size: 'lg' })}
           >
-            <Button
-              variant="secondary"
-              size="lg"
-            >
-              Fale Comigo
-            </Button>
+            Fale comigo
           </a>
         </nav>
 

@@ -1,58 +1,75 @@
-import { Button } from '@/components/ui/button.tsx'
+import { buttonVariants } from '@/components/ui/button.tsx'
 import { Mail, Send } from 'lucide-react'
 import { Github } from '@/assets/icons/github.tsx'
 import { Linkedin } from '@/assets/icons/linkedin.tsx'
 
 export const Contact = () => {
   return (
-    <div
+    <section
       id="contact"
-      className="flex flex-col gap-4 px-2 py-12 pb-20 md:mt-24 md:px-6 md:py-12 lg:px-12 lg:py-18 xl:px-36 xl:py-18"
+      aria-labelledby="contact-title"
+      className="flex flex-col items-center gap-4 px-6 py-12 pb-20 md:mt-24 md:px-6 md:py-12 lg:px-12 lg:py-18 xl:px-36 xl:py-18"
     >
-      <span className="text-primary font-mono text-xs font-normal uppercase text-center">// 04. Contato</span>
-      <h2 className="text-center bg-linear-to-r from-[#FFFFFF] to-[#8F8F8F] bg-clip-text font-mono text-3xl font-bold text-transparent md:text-5xl">
+      <span className="text-primary text-center font-mono text-xs font-normal uppercase">
+        // 04. Contato
+      </span>
+      <h2
+        id="contact-title"
+        className="bg-linear-to-r from-[#FFFFFF] to-[#8F8F8F] bg-clip-text text-center font-mono text-3xl font-bold text-transparent md:text-5xl"
+      >
         Vamos construir algo?
       </h2>
+      <p className="text-muted-foreground max-w-xl text-center text-sm md:text-base">
+        Estou aberto a novas oportunidades e conversas sobre projetos. O caminho mais rápido é por
+        e-mail.
+      </p>
       <a
         href="mailto:pauloturcko@gmail.com"
-        className="mt-6 mb-4 flex justify-center"
+        className={buttonVariants({
+          variant: 'gradient',
+          size: 'xl',
+          className: 'mt-6 mb-4 flex w-64 items-center justify-center gap-2 text-sm font-bold',
+        })}
       >
-        <Button
-          variant="gradient"
-          size="xl"
-          className="flex w-64 items-center justify-center gap-2 text-sm font-bold"
-        >
-          <Send strokeWidth={2.5} />
-          pauloturcko@gmail.com
-        </Button>
+        <Send
+          strokeWidth={2.5}
+          aria-hidden="true"
+        />
+        pauloturcko@gmail.com
       </a>
-      <div>
-        <ul className="text-muted-foreground flex gap-4 justify-center">
-          <li className="hover:text-primary cursor-pointer">
-            <a
-              href="https://github.com/pauloturcko"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github />
-            </a>
-          </li>
-          <li className="hover:text-primary cursor-pointer">
-            <a
-              href="https://www.linkedin.com/in/pauloturco/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin />
-            </a>
-          </li>
-          <li className="hover:text-primary cursor-pointer">
-            <a href="mailto:pauloturcko@gmail.com">
-              <Mail />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <ul className="text-muted-foreground flex justify-center gap-4">
+        <li>
+          <a
+            href="https://github.com/pauloturcko"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub (abre em nova aba)"
+            className="hover:text-primary transition-colors"
+          >
+            <Github />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/pauloturco/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn (abre em nova aba)"
+            className="hover:text-primary transition-colors"
+          >
+            <Linkedin />
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:pauloturcko@gmail.com"
+            aria-label="Enviar e-mail"
+            className="hover:text-primary transition-colors"
+          >
+            <Mail aria-hidden="true" />
+          </a>
+        </li>
+      </ul>
+    </section>
   )
 }

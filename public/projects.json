@@ -1,38 +1,83 @@
 [
   {
-    "name": "Portfólio 2.0",
-    "description": "Um espaço dedicado a compartilhar minha evolução como desenvolvedor, reunindo projetos recentes e estudos contínuos. Desenvolvido com tecnologias modernas e com foco em UX.",
-    "url": "#home",
-    "technologies": ["React", "TypeScript", "Tailwind CSS"]
+    "name": "Yūgen",
+    "description": "Landing page de uma startup fictícia de produtividade e foco profundo, com identidade minimalista e animações fluidas.",
+    "details": "Inspirado no conceito japonês de Yūgen, o projeto apresenta uma startup fictícia de produtividade voltada ao estado de foco profundo. A landing page aposta em uma identidade minimalista, ritmo visual calmo e animações fluidas para criar uma navegação imersiva. É um trabalho centrado em frontend e experiência do usuário: composição de layout, tipografia, responsividade e movimento a serviço da narrativa da marca.",
+    "url": "https://yugen.pauloturcko.dev/",
+    "repositories": [
+      { "label": "Frontend", "url": "https://github.com/pauloturcko/yugen" }
+    ],
+    "media": [],
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "status": "publicado",
+    "type": "Projeto pessoal"
   },
   {
-    "name": "WhaiData",
-    "description": "Sistema financeiro inteligente para controle e análise de gastos, com geração de insights automáticos, importação de dados e relatórios personalizados. Desenvolvido com foco em experiência do usuário e tomada de decisão.",
-    "url": "https://whaidata.pauloturcko.dev",
-    "technologies": ["Next.js", "TypeScript", "Node.js", "Express", "Styled Components"]
+    "name": "Thryve",
+    "description": "Aplicação full stack de gestão financeira pessoal, pensada para ajudar a entender hábitos e tomar decisões mais conscientes.",
+    "details": "O Thryve é uma aplicação de gestão financeira pessoal que vai além do registro de despesas: a proposta é ajudar as pessoas a compreender seus hábitos, organizar movimentações e tomar decisões mais conscientes sobre o próprio dinheiro. O produto é construído como uma aplicação full stack, com frontend e backend separados, autenticação e persistência em banco relacional. A evolução planejada — ainda não disponível — inclui importação assistida de extratos, sugestões de lançamentos para revisão, relatórios, insights personalizados, acompanhamento de metas e registro de transações por voz.",
+    "url": "https://thryve.pauloturcko.dev",
+    "repositories": [
+      { "label": "Frontend", "url": "https://github.com/pauloturcko/thryve-client" },
+      { "label": "Backend", "url": "https://github.com/pauloturcko/thryve-api" }
+    ],
+    "media": [],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "TypeORM",
+      "Docker"
+    ],
+    "status": "em desenvolvimento",
+    "type": "Projeto pessoal"
+  },
+  {
+    "name": "Sync",
+    "description": "Plataforma de inteligência de marketing e gestão de leads que conecta dados, processos e informações comerciais.",
+    "details": "O Sync nasceu de um problema operacional real: dados de marketing e informações comerciais dispersos entre ferramentas diferentes. Identifiquei a necessidade, apresentei a proposta de solução à liderança e, com a aprovação, assumi o desenvolvimento. Hoje é uma central multi-tenant de inteligência de marketing e gestão de leads, com funcionalidades de CRM, dashboards, pipeline de leads, integrações com plataformas de marketing e automações. Sou o principal desenvolvedor do projeto, que está em operação e em evolução contínua. Por se tratar de um sistema privado da empresa, código e telas não são divulgados.",
+    "url": null,
+    "repositories": [],
+    "media": [],
+    "technologies": ["Node.js", "NestJS", "TypeScript", "React", "PostgreSQL", "Go", "Railway"],
+    "status": "em operação",
+    "type": "Projeto profissional",
+    "confidential": true
+  },
+  {
+    "name": "Portfólio 2.0",
+    "description": "Este portfólio: um espaço para apresentar minha trajetória, projetos e experiências como desenvolvedor.",
+    "details": "Aplicação pessoal criada para apresentar minha trajetória, meus projetos e minhas experiências como desenvolvedor. O foco está em uma interface moderna e responsiva, com identidade visual própria, animações sutis e atenção à experiência do usuário — da navegação por âncoras à exploração dos projetos em detalhes, sem sair da página.",
+    "url": "#home",
+    "repositories": [{ "label": "Repositório", "url": "https://github.com/pauloturcko/portfolio-2.0" }],
+    "media": [],
+    "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    "status": "publicado",
+    "type": "Projeto pessoal"
   },
   {
     "name": "Nimbus",
-    "description": "Serviço de cloud storage inspirado no Google Drive, com upload de arquivos grandes em partes, links compartilháveis com permissões, versionamento e processamento assíncrono com filas, em TypeScript de ponta a ponta.",
+    "description": "Conceito de plataforma de armazenamento de arquivos em nuvem, com foco em compartilhamento e organização.",
+    "details": "O Nimbus é o conceito de uma plataforma de armazenamento de arquivos em nuvem, pensada para simplificar a gestão e o compartilhamento de arquivos. A proposta inclui uploads em partes para arquivos grandes, links compartilháveis com permissões, versionamento e processamento assíncrono de tarefas em segundo plano. O projeto ainda está em fase de concepção e não foi implementado por completo — as funcionalidades descritas representam o escopo planejado.",
     "url": null,
-    "technologies": ["NestJS", "React", "TypeScript", "PostgreSQL", "RabbitMQ", "S3"]
+    "repositories": [],
+    "media": [],
+    "technologies": ["NestJS", "React", "TypeScript", "PostgreSQL", "RabbitMQ", "S3"],
+    "status": "em planejamento",
+    "type": "Conceito"
   },
   {
-    "name": "Bout me",
-    "description": "Um pouco além do código...",
+    "name": "About Me",
+    "description": "Um pouco além do código.",
+    "details": "Projeto pessoal ainda não desenvolvido, voltado a apresentar interesses e experiências que vão além da programação.",
     "url": null,
-    "technologies": ["React", "TypeScript", "Tailwind CSS"]
-  },
-  {
-    "name": "Vitality Gym",
-    "description": "Plataforma fullstack para gestão de academia, com controle de usuários, treinos, planos e agendamentos, incluindo notificações, automações e lógica de negócio voltada à organização e escalabilidade do sistema.",
-    "url": null,
-    "technologies": ["Node.js", "NestJS", "React", "TypeScript", "Styled Components"]
-  },
-  {
-    "name": "Yūgen",
-    "description": "Landing page de uma startup fictícia focada em produtividade e estado de foco profundo, com design minimalista, animações suaves e experiência centrada na imersão do usuário.",
-    "url": "https://yugen.pauloturcko.dev/",
-    "technologies": ["React", "TypeScript", "Tailwind CSS"]
+    "repositories": [],
+    "media": [],
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "status": "em planejamento",
+    "type": "Projeto pessoal"
   }
 ]

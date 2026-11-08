@@ -1,108 +1,42 @@
+import { Maximize2 } from 'lucide-react'
 import SpotlightCard from '@/components/react-bits/spotlight-cards'
-import { ExternalLink, Info } from 'lucide-react'
-import { useState } from 'react'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog.tsx'
+import { TechBadges } from '@/components/ui/tech-badges.tsx'
+import type { Project } from '@/types/project.ts'
 
 type ProjectsCardProps = {
-  index: number;
-  name: string;
-  description: string;
-  url: string | null;
-  technologies: string[];
+  index: number
+  project: Project
+  onOpen: (trigger: HTMLButtonElement) => void
 }
 
-export const ProjectsCard = ({
-  index,
-  name,
-  description,
-  url,
-  technologies,
-}: ProjectsCardProps) => {
-  const [open, setOpen] = useState(false)
-
-  const handleCardClick = () => {
-    if (url === null) {
-      setOpen(true)
-      return
-    }
-
-    if (url === "#home") {
-      return
-    }
-
-    window.open(url, "_blank", "noopener,noreferrer")
-  }
-
-  const renderIcon = () => {
-    if (url === null) {
-      return (
-        <Info
-          size="18"
-          className="cursor-pointer"
-        />
-      )
-    }
-
-    if (url === "#home") {
-      return
-    }
-
-    return (
-      <ExternalLink
-        size="18"
-        className="cursor-pointer"
-      />
-    )
-  }
-
+export const ProjectsCard = ({ index, project, onOpen }: ProjectsCardProps) => {
   return (
-    <>
-      {open && (
-        <Dialog
-          open={open}
-          onOpenChange={setOpen}
-        >
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Novidades em breve!</DialogTitle>
-              <DialogDescription>
-                Estou trabalhando para finalizar este projeto com carinho.
-              </DialogDescription>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog>
-      )}
-      <SpotlightCard
-        onClick={handleCardClick}
-        className="border-muted-foreground hover:border-primary flex h-90 lg:h-82 xl:h-72 cursor-pointer flex-col justify-between gap-4 rounded-xl border transition-all duration-300"
-      >
-        <div className="flex h-full flex-col">
-          <div className="text-muted-foreground flex justify-between font-mono text-xs font-normal">
-            <span>project // 0{index + 1}</span>
-            {renderIcon()}
-          </div>
-          <h3 className="mt-2 text-2xl font-bold">{name}</h3>
-          <p className="text-muted-foreground mt-4 flex w-full flex-col gap-4 font-mono text-sm font-normal">
-            {description}
-          </p>
+    <SpotlightCard className="border-muted-foreground hover:border-primary has-focus-visible:border-primary has-focus-visible:ring-ring/60 flex h-full min-h-64 flex-col justify-between gap-6 rounded-xl border transition-colors duration-300 has-focus-visible:ring-2">
+      <div className="flex flex-col">
+        <div className="text-muted-foreground flex items-center justify-between font-mono text-xs font-normal">
+          <span>project // {String(index + 1).padStart(2, '0')}</span>
+          <Maximize2
+            size={16}
+            aria-hidden="true"
+          />
         </div>
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="border-input text-muted-foreground rounded-md border px-2 py-1 font-mono text-xs"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </SpotlightCard>
-    </>
+        <h3 className="mt-2 text-2xl font-bold">
+          {/* Botão "esticado": cobre todo o card, mantendo semântica e foco de teclado */}
+          <button
+            type="button"
+            onClick={(event) => onOpen(event.currentTarget)}
+            className="cursor-pointer text-left outline-none after:absolute after:inset-0 after:z-10 after:content-['']"
+            aria-haspopup="dialog"
+          >
+            {project.name}
+            <span className="sr-only"> — ver detalhes do projeto</span>
+          </button>
+        </h3>
+        <p className="text-muted-foreground mt-4 line-clamp-3 font-mono text-sm font-normal">
+          {project.description}
+        </p>
+      </div>
+      <TechBadges technologies={project.technologies} />
+    </SpotlightCard>
   )
 }
