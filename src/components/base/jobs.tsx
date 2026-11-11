@@ -29,7 +29,7 @@ export const Jobs = () => {
     <section
       id="jobs"
       aria-labelledby="jobs-title"
-      className="flex flex-col gap-4 px-6 py-12 pb-20 md:mt-24 md:px-6 md:py-12 lg:px-12 lg:py-18 xl:px-36 xl:py-18"
+      className="mx-auto flex w-full max-w-400 flex-col gap-4 px-(--page-gutter) py-12 pb-20 md:mt-24 md:py-12 lg:py-18 xl:py-18"
     >
       <span className="text-primary font-mono text-xs font-normal uppercase">// 02. Carreira</span>
       <h2
@@ -38,12 +38,8 @@ export const Jobs = () => {
       >
         Experiência profissional
       </h2>
-
-      {/*
-        Uma única fonte de dados (public/jobs.json) e uma única estrutura de timeline.
-        Mobile: linha à esquerda. Desktop: cargo à direita da coluna de datas, linha central.
-      */}
-      <div className="relative mt-12">
+      
+      <div className="relative mx-auto mt-12 w-full max-w-6xl">
         <span
           aria-hidden="true"
           className="absolute top-2 bottom-2 left-[7px] w-0.5 bg-linear-to-b from-[#555555] via-[#333333] to-[#0A0A0A] md:left-[calc((100%-5rem)/3+2.5rem-1px)]"

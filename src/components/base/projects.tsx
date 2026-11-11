@@ -26,7 +26,7 @@ export const Projects = () => {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="flex flex-col gap-4 px-6 py-12 pb-20 md:mt-24 md:px-6 md:py-12 lg:px-12 lg:py-18 xl:px-36 xl:py-18"
+      className="mx-auto flex w-full max-w-400 flex-col gap-4 px-(--page-gutter) py-12 pb-20 md:mt-24 md:py-12 lg:py-18 xl:py-18"
     >
       <span className="text-primary font-mono text-xs font-normal uppercase">// 03. Trabalhos</span>
       <h2
