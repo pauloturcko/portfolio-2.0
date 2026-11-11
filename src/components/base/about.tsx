@@ -29,8 +29,8 @@ export const About = () => {
       >
         Sobre mim
       </h2>
-      <div className="flex flex-col gap-8 md:flex-row md:gap-10 lg:gap-16">
-        <div className="text-muted-foreground flex w-full max-w-2xl flex-col gap-4 text-sm leading-relaxed font-normal md:text-base">
+      <div className="flex flex-col gap-8 md:flex-row md:justify-between md:gap-10 lg:gap-16">
+        <div className="text-muted-foreground flex w-full max-w-184 flex-col gap-4 text-sm leading-relaxed font-normal md:text-base">
           <p>
             Sou desenvolvedor Full Stack, com experiência em sistemas corporativos e aplicações web.
             Minha principal stack é TypeScript, utilizando Node.js e NestJS na construção de APIs,
