@@ -1,0 +1,24 @@
+[
+  {
+    "company": "Tempero Propaganda",
+    "role": "Desenvolvedor Full Stack",
+    "period": "08/2026",
+    "current": true,
+    "description": "Sou o principal desenvolvedor do Sync, plataforma multi-tenant de inteligência de marketing e gestão de leads. O projeto começou quando identifiquei um problema operacional na centralização e no uso dos dados de marketing, propus uma solução à liderança e recebi aprovação para desenvolvê-la. Desde então, participo das decisões de arquitetura e conduzo a implementação de funcionalidades, as integrações com plataformas de marketing, os webhooks em Go, o versionamento, os ambientes, os deploys e a sustentação. O sistema está em operação e segue recebendo melhorias.",
+    "technologies": ["Node.js", "NestJS", "TypeScript", "React", "PostgreSQL", "Go"]
+  },
+  {
+    "company": "M8 Sistemas",
+    "role": "Desenvolvedor Front-End",
+    "period": "03/2025 — 03/2026",
+    "description": "Atuei na modernização e manutenção de um ERP corporativo legado com React e TypeScript. Integrei interfaces a APIs REST, analisei regras de negócio em C#/.NET e trabalhei na implementação de funcionalidades, refatorações, correção de bugs e melhorias de desempenho. Também participei de revisões e aprovações de pull requests e do acompanhamento de versões no Azure DevOps.",
+    "technologies": ["React", "TypeScript", "APIs REST", "Styled Components", "Azure DevOps"]
+  },
+  {
+    "company": "Neocom Comunicação",
+    "role": "Desenvolvedor Front-End",
+    "period": "01/2024 — 07/2024",
+    "description": "Desenvolvi sites institucionais e landing pages responsivas em colaboração com a equipe de design, e contribuí para internalizar o desenvolvimento web da agência.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Tailwind CSS"]
+  }
+]

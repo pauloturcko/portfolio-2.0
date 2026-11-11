@@ -39,9 +39,9 @@ const DEFAULT_ITEMS: MenuItem[] = [
     ariaLabel: 'Sobre',
   },
   {
-    label: 'Experiencia',
+    label: 'Experiência',
     href: '#jobs',
-    ariaLabel: 'Experiencia',
+    ariaLabel: 'Experiência',
   },
   {
     label: 'Projetos',
@@ -60,7 +60,7 @@ export default function BubbleMenu({
   onMenuClick,
   className,
   style,
-  menuAriaLabel = 'Toggle menu',
+  menuAriaLabel = 'Abrir menu de navegação',
   menuBg = '#fff',
   menuContentColor = '#111',
   useFixedPosition = false,
@@ -81,12 +81,7 @@ export default function BubbleMenu({
 
   const menuItems = items?.length ? items : DEFAULT_ITEMS
 
-  const containerClassName = [
-    'bubble-menu',
-    'relative',
-    'pointer-events-auto',
-    className,
-  ]
+  const containerClassName = ['bubble-menu', 'relative', 'pointer-events-auto', className]
     .filter(Boolean)
     .join(' ')
 
@@ -149,11 +144,7 @@ export default function BubbleMenu({
       gsap.set(backdrop, { display: 'block', opacity: 1 })
       gsap.set(overlay, { display: 'block', opacity: 1, y: 0 })
       gsap.killTweensOf([backdrop, overlay, ...bubbles])
-      gsap.fromTo(
-        backdrop,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.25, ease: 'power2.out' },
-      )
+      gsap.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' })
       gsap.fromTo(
         overlay,
         { opacity: 0, y: -12 },
@@ -244,7 +235,7 @@ export default function BubbleMenu({
         ref={navRef}
         className={containerClassName}
         style={{ ...style, zIndex: 1001 }}
-        aria-label="Main navigation"
+        aria-label="Navegação principal (mobile)"
       >
         <div className="flex items-center gap-3">
           {logo && (
@@ -291,7 +282,7 @@ export default function BubbleMenu({
             ].join(' ')}
             onClick={handleToggle}
             aria-label={menuAriaLabel}
-            aria-pressed={isMenuOpen}
+            aria-expanded={isMenuOpen}
             style={{ background: menuBg }}
           >
             <span
@@ -372,7 +363,7 @@ export default function BubbleMenu({
                 </li>
               ))}
             </ul>
-            <ul className="text-muted-foreground flex justify-center gap-4 mt-12 mb-4">
+            <ul className="text-muted-foreground mt-12 mb-4 flex justify-center gap-4">
               <li className="hover:text-primary cursor-pointer">
                 <a
                   href="https://github.com/pauloturcko"

@@ -20,6 +20,8 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Reserva o espaço da scrollbar: evita deslocamento do layout quando um modal trava a rolagem */
+    scrollbar-gutter: stable;
     scroll-padding-top: 5.5rem;
   }
   body {
@@ -44,6 +46,26 @@
   html::-webkit-scrollbar-thumb {
     background: var(--color-muted);
     border-radius: 9999px;
+  }
+}
+
+/* Gutter horizontal compartilhado entre Header e modais (acompanha px-4 / md:px-6 / lg:px-12 / xl:px-36) */
+:root {
+  --page-gutter: 1rem;
+}
+@media (min-width: 48rem) {
+  :root {
+    --page-gutter: 1.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  :root {
+    --page-gutter: 3rem;
+  }
+}
+@media (min-width: 80rem) {
+  :root {
+    --page-gutter: 9rem;
   }
 }
 

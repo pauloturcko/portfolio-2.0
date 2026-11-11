@@ -41,8 +41,8 @@ function App() {
         <Jobs />
         <Projects />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
       <Analytics />
     </>
   )
