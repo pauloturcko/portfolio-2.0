@@ -10,7 +10,7 @@ export const Home = () => {
     <section
       id="home"
       aria-label="Apresentação"
-      className="flex w-full flex-col gap-12 px-6 py-24 md:flex-row md:justify-between md:px-6 md:pt-16 lg:justify-between lg:px-12 lg:pt-16 xl:justify-between xl:px-36 xl:pt-24 2xl:justify-between 2xl:px-36 2xl:pt-24"
+      className="mx-auto flex w-full max-w-400 flex-col gap-12 px-(--page-gutter) py-24 md:flex-row md:justify-between md:pt-16 lg:pt-16 xl:pt-24"
     >
       <div className="flex h-auto w-full flex-col items-stretch justify-center gap-6 md:gap-8">
         <span className="font-mono font-normal md:font-bold">——— olá, mundo</span>

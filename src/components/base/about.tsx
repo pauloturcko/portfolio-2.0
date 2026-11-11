@@ -20,7 +20,7 @@ export const About = () => {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="flex flex-col gap-4 px-6 py-12 pb-20 md:mt-24 md:px-6 md:py-12 lg:px-12 lg:py-18 xl:px-36 xl:py-18"
+      className="mx-auto flex w-full max-w-400 flex-col gap-4 px-(--page-gutter) py-12 pb-20 md:mt-24 md:py-12 lg:py-18 xl:py-18"
     >
       <span className="text-primary font-mono text-xs font-normal uppercase">// 01. Sobre</span>
       <h2
@@ -29,8 +29,8 @@ export const About = () => {
       >
         Sobre mim
       </h2>
-      <div className="flex flex-col justify-between gap-8 md:flex-row md:gap-10">
-        <div className="text-muted-foreground flex w-full flex-col gap-4 text-sm leading-relaxed font-normal md:w-2/3 md:text-base lg:w-3/5">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-10 lg:gap-16">
+        <div className="text-muted-foreground flex w-full max-w-2xl flex-col gap-4 text-sm leading-relaxed font-normal md:text-base">
           <p>
             Sou desenvolvedor Full Stack, com experiência em sistemas corporativos e aplicações web.
             Minha principal stack é TypeScript, utilizando Node.js e NestJS na construção de APIs,
