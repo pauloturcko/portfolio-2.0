@@ -22,16 +22,14 @@
     scroll-behavior: smooth;
     /* Reserva o espaço da scrollbar: evita deslocamento do layout quando um modal trava a rolagem */
     scrollbar-gutter: stable;
-    scroll-padding-top: 5.5rem;
+    /* Compensa o Header fixo nas âncoras (não somar com scroll-margin nos [id]) */
+    scroll-padding-top: 4.5rem;
   }
   body {
     @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
-  }
-  [id] {
-    scroll-margin-top: 5.5rem;
   }
 
   /* SCROLLBAR GLOBAL */

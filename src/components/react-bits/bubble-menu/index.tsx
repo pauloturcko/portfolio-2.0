@@ -126,11 +126,11 @@ export default function BubbleMenu({
   useEffect(() => {
     if (!isMenuOpen) return
 
-    const originalOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
 
+    // Remove em vez de restaurar um valor capturado: evita herdar o lock de outro modal
     return () => {
-      document.body.style.overflow = originalOverflow
+      document.body.style.removeProperty('overflow')
     }
   }, [isMenuOpen])
 

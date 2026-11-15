@@ -7,7 +7,14 @@
     "repositories": [
       { "label": "Frontend", "url": "https://github.com/pauloturcko/yugen" }
     ],
-    "media": [],
+    "media": [
+      { "type": "image", "src": "/projects/yugen/print-1.webp", "alt": "Captura de tela 1 da landing page do Yūgen" },
+      { "type": "image", "src": "/projects/yugen/print-2.webp", "alt": "Captura de tela 2 da landing page do Yūgen" },
+      { "type": "image", "src": "/projects/yugen/print-3.webp", "alt": "Captura de tela 3 da landing page do Yūgen" },
+      { "type": "image", "src": "/projects/yugen/print-4.webp", "alt": "Captura de tela 4 da landing page do Yūgen" },
+      { "type": "image", "src": "/projects/yugen/print-5.webp", "alt": "Captura de tela 5 da landing page do Yūgen" },
+      { "type": "image", "src": "/projects/yugen/print-6.webp", "alt": "Captura de tela 6 da landing page do Yūgen" }
+    ],
     "technologies": ["React", "TypeScript", "Tailwind CSS"],
     "status": "publicado",
     "type": "Projeto pessoal"
@@ -21,7 +28,16 @@
       { "label": "Frontend", "url": "https://github.com/pauloturcko/thryve-client" },
       { "label": "Backend", "url": "https://github.com/pauloturcko/thryve-api" }
     ],
-    "media": [],
+    "media": [
+      { "type": "image", "src": "/projects/thryve/dashboard.webp", "alt": "Dashboard do Thryve com saldo do mês, receitas, gastos, taxa de economia e próximos vencimentos" },
+      { "type": "image", "src": "/projects/thryve/contas.webp", "alt": "Tela de contas do Thryve" },
+      { "type": "image", "src": "/projects/thryve/gastos.webp", "alt": "Tela de gastos do Thryve" },
+      { "type": "image", "src": "/projects/thryve/receitas.webp", "alt": "Tela de receitas do Thryve" },
+      { "type": "image", "src": "/projects/thryve/categorias.webp", "alt": "Tela de categorias do Thryve" },
+      { "type": "image", "src": "/projects/thryve/investimentos.webp", "alt": "Tela de investimentos do Thryve" },
+      { "type": "image", "src": "/projects/thryve/metas.webp", "alt": "Tela de metas do Thryve" },
+      { "type": "image", "src": "/projects/thryve/relatorio.webp", "alt": "Tela de relatórios do Thryve" }
+    ],
     "technologies": [
       "Next.js",
       "React",
@@ -32,7 +48,7 @@
       "TypeORM",
       "Docker"
     ],
-    "status": "em desenvolvimento",
+    "status": "publicado",
     "type": "Projeto pessoal"
   },
   {

@@ -53,7 +53,7 @@ const MediaItem = ({ item }: { item: ProjectMedia }) => {
 
   return (
     <img
-      className="h-full w-full object-contain"
+      className="h-full w-full object-cover"
       src={item.src}
       alt={item.alt}
       loading="lazy"
@@ -77,50 +77,66 @@ export const ProjectMediaViewer = ({
 
   return (
     <div
-      className={cn(
-        'border-input bg-background/80 relative aspect-video w-full overflow-hidden rounded-lg border',
-        className,
-      )}
+      className={cn('flex w-full flex-col gap-3', className)}
       role={hasMultiple ? 'region' : undefined}
       aria-roledescription={hasMultiple ? 'carrossel' : undefined}
       aria-label={hasMultiple ? `Mídias do projeto ${projectName}` : undefined}
     >
-      {active ? <MediaItem item={active} /> : <MediaPlaceholder confidential={confidential} />}
+      {/* Moldura na proporção das capturas (16:10): a mídia ocupa tudo */}
+      <div className="border-input bg-background/80 relative aspect-[16/10] w-full overflow-hidden rounded-lg border">
+        {active ? (
+          <div
+            key={current}
+            className="animate-in fade-in h-full w-full duration-300"
+          >
+            <MediaItem item={active} />
+          </div>
+        ) : (
+          <MediaPlaceholder confidential={confidential} />
+        )}
+      </div>
 
+      {/* Controles fora da imagem: nunca cobrem a tela capturada nem a barra do sistema */}
       {hasMultiple && (
         <>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="bg-background/70 absolute top-1/2 left-2 -translate-y-1/2 backdrop-blur-sm"
-            onClick={() => goTo(current - 1)}
-            aria-label="Mídia anterior"
-          >
-            <ChevronLeft />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="bg-background/70 absolute top-1/2 right-2 -translate-y-1/2 backdrop-blur-sm"
-            onClick={() => goTo(current + 1)}
-            aria-label="Próxima mídia"
-          >
-            <ChevronRight />
-          </Button>
-          <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-black/60 px-2 py-1">
-            {media.map((item, index) => (
-              <button
-                key={item.src}
-                type="button"
-                onClick={() => setCurrent(index)}
-                aria-label={`Exibir mídia ${index + 1} de ${total}`}
-                aria-current={index === current}
-                className={cn(
-                  'focus-visible:ring-ring size-2 cursor-pointer rounded-full transition-colors outline-none focus-visible:ring-2',
-                  index === current ? 'bg-foreground' : 'bg-foreground/35 hover:bg-foreground/60',
-                )}
-              />
-            ))}
+          <div className="flex items-center justify-center gap-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="transition-colors"
+              onClick={() => goTo(current - 1)}
+              aria-label="Mídia anterior"
+            >
+              <ChevronLeft />
+            </Button>
+            <div className="flex items-center gap-1">
+              {media.map((item, index) => (
+                <button
+                  key={item.src}
+                  type="button"
+                  onClick={() => setCurrent(index)}
+                  aria-label={`Exibir mídia ${index + 1} de ${total}`}
+                  aria-current={index === current}
+                  className="focus-visible:ring-ring flex cursor-pointer items-center justify-center rounded-full p-1.5 outline-none focus-visible:ring-2"
+                >
+                  <span
+                    className={cn(
+                      'block size-2 rounded-full transition-colors duration-300',
+                      index === current ? 'bg-foreground' : 'bg-foreground/35 hover:bg-foreground/60',
+                    )}
+                  />
+                </button>
+              ))}
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="transition-colors"
+              onClick={() => goTo(current + 1)}
+              aria-label="Próxima mídia"
+            >
+              <ChevronRight />
+            </Button>
           </div>
           <p
             className="sr-only"

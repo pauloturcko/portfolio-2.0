@@ -11,7 +11,8 @@ type ProjectsCardProps = {
 
 export const ProjectsCard = ({ index, project, onOpen }: ProjectsCardProps) => {
   return (
-    <SpotlightCard className="border-muted-foreground hover:border-primary has-focus-visible:border-primary has-focus-visible:ring-ring/60 flex h-full min-h-64 flex-col justify-between gap-6 rounded-xl border transition-colors duration-300 has-focus-visible:ring-2">
+    // Mesmo fundo do header: preto semitransparente com blur
+    <SpotlightCard className="bg-black/55 backdrop-blur-xl border-border hover:border-white/30 has-focus-visible:border-white/30 has-focus-visible:ring-ring/60 flex h-full min-h-56 flex-col justify-between gap-6 rounded-xl border p-6 transition-colors duration-300 has-focus-visible:ring-2 md:min-h-64 md:p-8">
       <div className="flex flex-col">
         <div className="text-muted-foreground flex items-center justify-between font-mono text-xs font-normal">
           <span>project // {String(index + 1).padStart(2, '0')}</span>

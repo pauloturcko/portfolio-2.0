@@ -10,7 +10,7 @@ export const Home = () => {
     <section
       id="home"
       aria-label="Apresentação"
-      className="mx-auto flex w-full max-w-400 flex-col gap-12 px-(--page-gutter) py-24 md:flex-row md:justify-between md:pt-16 lg:pt-16 xl:pt-24"
+      className="flex w-full flex-col gap-12 px-6 pt-24 pb-4 md:flex-row md:justify-between md:px-6 md:pt-16 md:pb-24 lg:justify-between lg:px-12 lg:pt-16 xl:justify-between xl:px-36 xl:pt-24 2xl:justify-between 2xl:px-36 2xl:pt-24"
     >
       <div className="flex h-auto w-full flex-col items-stretch justify-center gap-6 md:gap-8">
         <span className="font-mono font-normal md:font-bold">——— olá, mundo</span>
@@ -38,13 +38,13 @@ export const Home = () => {
           Gosto de transformar ideias em produtos funcionais, com código organizado e soluções bem
           pensadas.
         </p>
-        <div className="flex gap-4 md:mt-4">
+        <div className="flex flex-wrap gap-3 sm:gap-4 md:mt-4">
           <a
             href="#projects"
             className={buttonVariants({
               variant: 'gradient',
               size: 'xl',
-              className: 'text-sm font-bold',
+              className: 'grow basis-36 text-sm font-bold sm:w-40 sm:grow-0 sm:basis-auto',
             })}
           >
             Ver projetos <ArrowUpRight aria-hidden="true" />
@@ -54,7 +54,7 @@ export const Home = () => {
             className={buttonVariants({
               variant: 'secondary',
               size: 'xl',
-              className: 'text-sm font-normal',
+              className: 'grow basis-36 text-sm font-normal sm:w-40 sm:grow-0 sm:basis-auto',
             })}
           >
             Entrar em contato
@@ -96,11 +96,12 @@ export const Home = () => {
           </li> */}
         </ul>
       </div>
-      <div className="h-100 w-87.5 rounded-[15px] shadow-[0_0_150px_15px_oklch(0.556_0_0/0.3)]">
+      <div className="aspect-7/8 w-full max-w-87.5 shrink-0 self-center rounded-[15px] shadow-[0_0_150px_15px_oklch(0.556_0_0/0.3)] md:max-w-64 md:self-auto lg:max-w-87.5">
         <TiltedCard
-          imageHeight="400px"
-          imageWidth="350px"
-          containerHeight="400px"
+          imageHeight="100%"
+          imageWidth="100%"
+          containerHeight="100%"
+          showMobileWarning={false}
           imageSrc="/me.png"
           altText="Foto de Paulo Turco"
         />
