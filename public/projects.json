@@ -54,10 +54,17 @@
   {
     "name": "Sync",
     "description": "Plataforma de inteligência de marketing e gestão de leads que conecta dados, processos e informações comerciais.",
-    "details": "O Sync nasceu de um problema operacional real: dados de marketing e informações comerciais dispersos entre ferramentas diferentes. Identifiquei a necessidade, apresentei a proposta de solução à liderança e, com a aprovação, assumi o desenvolvimento. Hoje é uma central multi-tenant de inteligência de marketing e gestão de leads, com funcionalidades de CRM, dashboards, pipeline de leads, integrações com plataformas de marketing e automações. Sou o principal desenvolvedor do projeto, que está em operação e em evolução contínua. Por se tratar de um sistema privado da empresa, código e telas não são divulgados.",
+    "details": "O Sync nasceu de um problema operacional real: dados de marketing e informações comerciais dispersos entre ferramentas diferentes. Identifiquei a necessidade, apresentei a proposta de solução à liderança e, com a aprovação, assumi o desenvolvimento. Hoje é uma central multi-tenant de inteligência de marketing e gestão de leads, com funcionalidades de CRM, dashboards, pipeline de leads, integrações com plataformas de marketing e automações. Sou o principal desenvolvedor do projeto, que está em operação e em evolução contínua. Por se tratar de um sistema privado da empresa, o código não é divulgado e as telas exibidas usam um ambiente de demonstração com dados fictícios.",
     "url": null,
     "repositories": [],
-    "media": [],
+    "media": [
+      { "type": "image", "src": "/projects/sync/dashboard.webp", "alt": "Dashboard do Sync com leads, vendas, receita, leads aguardando atendimento e mapa de leads por dia e horário" },
+      { "type": "image", "src": "/projects/sync/leads.webp", "alt": "Kanban de leads do Sync organizado por etapa, do primeiro contato até a venda" },
+      { "type": "image", "src": "/projects/sync/lead-detalhes.webp", "alt": "Detalhes de um lead no Sync com contato, respostas do formulário, origem da campanha e linha do tempo" },
+      { "type": "image", "src": "/projects/sync/usuarios.webp", "alt": "Configurações de usuários do Sync com cargos, filiais e situação de acesso" },
+      { "type": "image", "src": "/projects/sync/cargos.webp", "alt": "Configuração de cargos e permissões do Sync" },
+      { "type": "image", "src": "/projects/sync/colunas-kanban.webp", "alt": "Configuração das colunas do kanban de leads do Sync" }
+    ],
     "technologies": ["Node.js", "NestJS", "TypeScript", "React", "PostgreSQL", "Go", "Railway"],
     "status": "em operação",
     "type": "Projeto profissional",
